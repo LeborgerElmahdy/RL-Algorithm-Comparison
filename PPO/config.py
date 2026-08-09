@@ -12,6 +12,9 @@ TIME_PENALTY = -0.05
 DAMAGE_TAKEN_PENALITY = -10
 DEATH_PENALITY = -100
 
+# --- Actions ---
+ACTION_NAMES = ["Attack", "Defend", "Dodge"]
+
 # --- Actions Indices ---
 ACTION_ATTACK = 0
 ACTION_DEFEND = 1
@@ -41,4 +44,4 @@ GAMMA = 0.99
 GAE_LAMBDA = 0.95
 EPSILON = 0.2
 LEARNING_RATE = 3e-4
-EPOCHS = 4
+EPOCHS = 5
