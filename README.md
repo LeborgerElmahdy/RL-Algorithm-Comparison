@@ -22,8 +22,8 @@ eliminated.
 ## Action Space
 - **Attack** — guaranteed 100% damage, no cost
 - **Defend** — mitigates 70% of damage recieved, never fully blocks
-- **Dodge-Counter** — 70% chance of success: negate damage and deal 100% damage.
-  30% chance: take 150% damage.
+- **Dodge-Counter** — 70% chance of success: negate damage and deal 120% damage.
+  30% chance: take 150% damage. (ONLY DEALS DAMAGE IF THE OPPOSITE SIDE IS "ATTACK", if the opposite side is defend or dodge nothing happens.)
 
 ## Turn Resolution
 Both sides choose their actions at once, the agent reacts to the Player
@@ -48,7 +48,7 @@ results in some HP decreasing every turn, since chip damage is never 0.
 
 ## Scripted Player Policy
 - **HP-based phases**:
-  - HP > 60%: mostly Attack, occasional Dodge-Counter => 70% attack, 30% dodge
+  - HP > 60%: mostly Attack, occasional Dodge-Counter => 70% attack, 5% defend, 25% dodge
   - HP 30–60%: even mix of all three => 40% attack, 30% dodge, 30% defend
   - HP < 30%: mostly Defend, with a chance of Dodge-Counter, 70% defend, 30% dodge
 - **Reactive conditioning**:
