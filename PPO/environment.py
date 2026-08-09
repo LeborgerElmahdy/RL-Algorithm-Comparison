@@ -6,6 +6,7 @@ class CombatEnv:
         self.agent = PlayerObject()
         self.reset()
 
+    #this calls the playerObject reset() for both player and agent.
     def reset(self):
         self.player.reset()
         self.agent.reset()
@@ -13,6 +14,7 @@ class CombatEnv:
         self.done = False
         return self.get_state()
 
+    #used in the actor, which is yet to be implemented
     def get_state(self):
         return {
             "player_hp_percentage": self.player.hp_percentage,
@@ -25,3 +27,5 @@ class CombatEnv:
             
             "turn_count": self.turn_count,
         }
+    
+    
