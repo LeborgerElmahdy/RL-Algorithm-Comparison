@@ -11,7 +11,7 @@ DODGE_COUNTER_SUCCESS_RATE = 0.7
 TIME_PENALTY = -0.05
 DAMAGE_TAKEN_PENALITY = -10
 DEATH_PENALITY = -100
-
+WIN_BOUNS = 100
 # --- Actions ---
 ACTION_NAMES = ["Attack", "Defend", "Dodge"]
 
@@ -39,9 +39,12 @@ REACTIVE_STREAK_LENGTH = 2        # how many repeated enemy actions trigger a re
 REACTIVE_DODGE_BOOST = 0.25       # added to Dodge-Counter weight if a dodge reaction is triggered
 REACTIVE_ATTACK_BOOST = 0.25      # added to Attack weight if a attack reaction is triggered
 
+
 # --- Hyperparameters ---
 GAMMA = 0.99
-GAE_LAMBDA = 0.95
-EPSILON = 0.2
-LEARNING_RATE = 3e-4
-EPOCHS = 5
+ACTOR_LR = 3e-4
+CRITIC_LR = 1e-3
+ENTROPY_COEF = 0.01
+VALUE_COEF = 0.5
+HIDDEN_SIZE = 64
+EPOCHS = 300
