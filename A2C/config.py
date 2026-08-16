@@ -6,12 +6,11 @@ DEFEND_CHIP_DAMAGE_RATIO = 0.3                  # Dealt to defender
 DODGE_COUNTER_DAMAGE = ATTACK_DAMAGE * 1.2      # Dealt to attack target
 DODGE_COUNTER_FAIL_DAMAGE = ATTACK_DAMAGE * 1.5 # Dealt to attack originator
 DODGE_COUNTER_SUCCESS_RATE = 0.7
+STALEMATE_CHIP_DAMAGE = ATTACK_DAMAGE * 0.15    # chip dmg when both sides Defend
 
-# --- Penalties ---
+# --- Penalties / reward shaping ---
 TIME_PENALTY = -0.05
 DAMAGE_TAKEN_PENALITY = -10
-DEATH_PENALITY = -100
-WIN_BOUNS = 100
 # --- Actions ---
 ACTION_NAMES = ["Attack", "Defend", "Dodge"]
 
@@ -47,4 +46,5 @@ CRITIC_LR = 1e-3
 ENTROPY_COEF = 0.01
 VALUE_COEF = 0.5
 HIDDEN_SIZE = 64
-EPOCHS = 300
+# --- Training loop ---
+MAX_TURNS_PER_EPISODE = 300   # soft cap, training-only
