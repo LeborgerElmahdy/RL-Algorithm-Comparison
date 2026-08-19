@@ -1,4 +1,4 @@
-# RL Algorithm Test Blueprint — Attack/Defend/Dodge-Counter
+# RL Algorithm Test Blueprint
 
 ## Goal
 They would all be implemented around attack / defend states, with a basic
